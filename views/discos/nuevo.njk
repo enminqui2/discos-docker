@@ -1,0 +1,9 @@
+{% extends "layout.njk" %}
+
+{% block contenido %}
+<h1>Nuevo disco</h1>
+
+{% set accion = "/discos" %}
+{% set textoBoton = "Guardar disco" %}
+{% include "discos/_formulario.njk" %}
+{% endblock %}

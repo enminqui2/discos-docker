@@ -1,0 +1,22 @@
+{
+  "name": "discos-app",
+  "version": "1.0.0",
+  "description": "CRUD de discos con Node.js, Express, Nunjucks y MongoDB (Docker)",
+  "type": "module",
+  "main": "app.js",
+  "scripts": {
+    "start": "node --env-file-if-exists=.env app.js",
+    "dev": "node --env-file-if-exists=.env --watch app.js",
+    "db:up": "docker compose up -d",
+    "db:down": "docker compose down",
+    "db:logs": "docker compose logs -f mongo"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "dependencies": {
+    "express": "^5.1.0",
+    "mongoose": "^8.9.0",
+    "nunjucks": "^3.2.4"
+  }
+}

@@ -1,0 +1,42 @@
+{% extends "layout.njk" %}
+
+{% block contenido %}
+<h1>Discos</h1>
+
+{% if mensaje %}
+  <p class="aviso" role="status">{{ mensaje }}</p>
+{% endif %}
+
+<form class="buscador" method="get" action="/discos">
+  <input type="search" name="q" value="{{ q }}" placeholder="Buscar por grupo o disco" aria-label="Buscar">
+  <button type="submit">Buscar</button>
+  {% if q %}<a href="/discos">Quitar filtro</a>{% endif %}
+</form>
+
+{% if discos.length %}
+  <ul class="rejilla">
+    {% for disco in discos %}
+      <li class="tarjeta">
+        <img src="{{ disco.portada_disco }}" alt="Portada de {{ disco.nombre_disco }}" loading="lazy">
+        <div class="info">
+          <h2>{{ disco.nombre_disco }}</h2>
+          <p>{{ disco.grupo }}</p>
+        </div>
+        <div class="acciones">
+          <a href="/discos/{{ disco._id }}/editar">Modificar</a>
+          <a href="/discos/{{ disco._id }}/eliminar" class="peligro">Eliminar</a>
+        </div>
+      </li>
+    {% endfor %}
+  </ul>
+  <p class="total">{{ discos.length }} disco{{ "s" if discos.length != 1 }}</p>
+{% else %}
+  <p class="vacio">
+    {% if q %}
+      No hay discos que coincidan con «{{ q }}».
+    {% else %}
+      Todavía no hay discos. <a href="/discos/nuevo">Añade el primero</a>.
+    {% endif %}
+  </p>
+{% endif %}
+{% endblock %}

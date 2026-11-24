@@ -1,0 +1,23 @@
+{# Formulario común para "nuevo" y "editar".
+   Variables: accion, textoBoton, disco, errores #}
+
+{% macro campo(nombre, etiqueta, valor, error, tipo="text", ayuda="") %}
+  <div class="campo{% if error %} con-error{% endif %}">
+    <label for="{{ nombre }}">{{ etiqueta }}</label>
+    <input type="{{ tipo }}" id="{{ nombre }}" name="{{ nombre }}" value="{{ valor }}" required>
+    {% if ayuda %}<small>{{ ayuda }}</small>{% endif %}
+    {% if error %}<p class="error">{{ error }}</p>{% endif %}
+  </div>
+{% endmacro %}
+
+<form method="post" action="{{ accion }}" class="formulario">
+  {{ campo("grupo", "Grupo", disco.grupo, errores.grupo) }}
+  {{ campo("nombre_disco", "Nombre del disco", disco.nombre_disco, errores.nombre_disco) }}
+  {{ campo("portada_disco", "Portada (URL de la imagen)", disco.portada_disco, errores.portada_disco,
+           "url", "Por ejemplo: https://ejemplo.com/portada.jpg") }}
+
+  <div class="botones">
+    <button type="submit" class="boton">{{ textoBoton }}</button>
+    <a href="/discos">Cancelar</a>
+  </div>
+</form>

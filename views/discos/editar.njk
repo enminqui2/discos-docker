@@ -1,0 +1,17 @@
+{% extends "layout.njk" %}
+
+{% block contenido %}
+<h1>Modificar disco</h1>
+
+<div class="con-portada">
+  {% if disco.portada_disco %}
+    <img class="portada" src="{{ disco.portada_disco }}" alt="Portada actual de {{ disco.nombre_disco }}">
+  {% endif %}
+
+  <div>
+    {% set accion = "/discos/" + disco._id + "/editar" %}
+    {% set textoBoton = "Guardar cambios" %}
+    {% include "discos/_formulario.njk" %}
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,71 @@
+[{
+	"_id": {
+		"$oid": "6afeda78b3f12ada124c76a8"
+	},
+	"grupo": "Héroes del Silencio",
+	"nombre_disco": "Senderos de traición",
+	"portada_disco": "https://placehold.co/400x400/1e293b/f8fafc?text=Senderos+de+traici%C3%B3n",
+	"createdAt": {
+		"$date": "2026-11-19T11:16:08.854Z"
+	},
+	"updatedAt": {
+		"$date": "2026-11-19T11:16:08.854Z"
+	}
+},
+{
+	"_id": {
+		"$oid": "6afeda78b3f12ada124c76a9"
+	},
+	"grupo": "Radiohead",
+	"nombre_disco": "OK Computer",
+	"portada_disco": "https://placehold.co/400x400/0f766e/f0fdfa?text=OK+Computer",
+	"createdAt": {
+		"$date": "2026-11-19T11:16:08.854Z"
+	},
+	"updatedAt": {
+		"$date": "2026-11-19T11:16:08.854Z"
+	}
+},
+{
+	"_id": {
+		"$oid": "6afedb7c8ce51c1b187cc7d2"
+	},
+	"grupo": "Queen",
+	"nombre_disco": "A night at the opera",
+	"portada_disco": "https://exileshmagazine.com/wp-content/uploads/2014/06/1975-a-night-at-the-opera-cover-front.jpg",
+	"createdAt": {
+		"$date": "2026-11-19T11:20:28.403Z"
+	},
+	"updatedAt": {
+		"$date": "2026-11-19T11:21:39.718Z"
+	}
+},
+{
+	"_id": {
+		"$oid": "6afedc718ce51c1b187cc7dd"
+	},
+	"grupo": "Queen",
+	"nombre_disco": "Queen II",
+	"portada_disco": "https://www.queenonline.com/global/uploads/QUEEN%202.jpg",
+	"createdAt": {
+		"$date": "2026-11-19T11:24:33.438Z"
+	},
+	"updatedAt": {
+		"$date": "2026-11-19T11:24:33.438Z"
+	}
+},
+{
+	"_id": {
+		"$oid": "6afede284a746b6f2741a42d"
+	},
+	"grupo": "091",
+	"nombre_disco": "Espejismo nº 9",
+	"portada_disco": "https://afondarenlacultura.es/wp-content/uploads/2026/02/PORTADA-091-ESPEJISMO-N9.jpg",
+	"createdAt": {
+		"$date": "2026-11-19T11:31:52.247Z"
+	},
+	"updatedAt": {
+		"$date": "2026-11-19T11:31:52.247Z"
+	}
+}]
+

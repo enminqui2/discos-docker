@@ -1,0 +1,22 @@
+{% extends "layout.njk" %}
+
+{% block contenido %}
+<h1>Eliminar disco</h1>
+
+<div class="confirmacion">
+  <img class="portada" src="{{ disco.portada_disco }}" alt="Portada de {{ disco.nombre_disco }}">
+  <div>
+    <p>¿Seguro que quieres eliminar este disco? Esta acción no se puede deshacer.</p>
+    <dl>
+      <dt>Grupo</dt>
+      <dd>{{ disco.grupo }}</dd>
+      <dt>Disco</dt>
+      <dd>{{ disco.nombre_disco }}</dd>
+    </dl>
+    <form method="post" action="/discos/{{ disco._id }}/eliminar" class="botones">
+      <button type="submit" class="boton peligro">Sí, eliminar</button>
+      <a href="/discos">Cancelar</a>
+    </form>
+  </div>
+</div>
+{% endblock %}
