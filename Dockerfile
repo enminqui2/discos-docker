@@ -1,5 +1,6 @@
 # 1. Imagen base: Linux Alpine con Node.js 26 ya instalado
 FROM node:26-alpine
+LABEL org.opencontainers.image.source=https://github.com/enminqui2/discos-docker
 
 # 2. Carpeta de trabajo dentro de la imagen
 WORKDIR /app
